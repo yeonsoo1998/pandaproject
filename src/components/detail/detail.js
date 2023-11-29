@@ -1,4 +1,4 @@
-import Toolbar from "./toolbar/toolbar";
+import Toolbar from "../toolbar/toolbar";
 import { useLocation } from "react-router-dom";
 
 function Detail() {

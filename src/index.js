@@ -6,7 +6,7 @@ import Login from "./Page/loginPage/loginPage";
 import Signup from "./components/signUpPage/signUpPage";
 import Novel from "./components/novelContent/novelContent";
 import Category from "./components/category";
-import Detail from "./components/detail";
+import Detail from "./components/detail/detail";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MyPage from "./Page/myPage/myPage";
