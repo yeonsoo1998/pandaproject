@@ -2,48 +2,76 @@
 .novel-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+.novel{
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1280px;
 }
 
 .novel-item {
-  flex: 0 0 calc(33.33% - 20px); /* 3개씩 나타내므로 100% / 3 - 간격 조절 값 */
+  width: 200px;
+  height: 370px;
   margin: 10px;
-  text-align: center;
-  border: 3px solid rgba(0, 0, 0, 0.7);
   border-radius: 10px;
-  box-shadow: 3px 3px 5px 1px gray;
 }
 
+
 .novel-item img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
+  width: 200px;
+  height: 270px;
+  border-radius: 10px;
 }
 
 .text-content {
-  /* 필요에 따라 텍스트에 스타일 추가 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+ padding: 8px 4px 0px;
+}
+.novel-card-category{
+  font-size: 15px;
 }
 
-.image-container {
-  flex: 0 0 calc(30% - 5px);
-  margin: 1%;
-  max-width: 24%;
+.novel h2{
+  margin: 0px 27px 40px;
+  padding: 36px 0px 0px;
+}
+.novel-card-title{
+text-align: left;
+font-size: 16px;
+font-weight: bold;
+white-space: normal;
+line-height: 1.2;
+}
+.novel-card-writer{
+  color: #999;
+}
+.novel-card-price{
+  font-size: 16px;
+  font-weight: bold;
+}
+.image-container{
+  cursor: pointer;
+}
+@media (max-width: 960px) {
+  .novel h2{
+    margin: 0px 0px 20px;
+    padding: 0px 0px 0px;
+  }
+  .novel-item{
+    margin:0;
+    margin-bottom: 20px;
+  }
+  .novel-container{
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+  }
 }
 
-h1 {
-  text-align: center;
-  margin-top: 3%;
-  margin-bottom: 1%;
-}
 
-.card-title {
-  margin: 10px;
-  border-bottom: 2px solid #ccc;
-}
-
-.novel-item:hover .card-title {
-  /* 여기에 card-title에 적용할 애니메이션 효과를 추가합니다 */
-  /* 예를 들어 테두리 밑줄을 추가하고, 색상 및 불투명도를 변경하는 애니메이션을 추가할 수 있습니다 */
-  border-bottom: 2px solid #c8a755;
-  transition: border-bottom 0.3s ease-in-out;
-}
