@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import Login from "./Page/loginPage/loginPage";
-import Signup from "./components/signUpPage/signUpPage";
+import Signup from "./Page/signUpPage/signUpPage";
 import Novel from "./components/novelContent/novelContent";
 import Category from "./components/category";
 import Detail from "./components/detail/detail";

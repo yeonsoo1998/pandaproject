@@ -1,33 +1,62 @@
-.Card_img {
+.poular-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.content-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 16px;
+  max-width: 1280px;
+  padding: 0px 20px;
+}
+.card-container {
+  max-width: 235px;
+}
+.card-content p {
+  font-size: 16px;
+  color: #333;
+}
+.card-box {
+  max-width: 235px;
+}
+.card-link {
+  display: flex;
+}
+.card-image {
   width: 100%;
-  height: 10rem;
+  height: 100px;
+  border-radius: 10px;
 }
-
-.content_card {
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 1%;
-  margin-bottom: 5%;
-}
-
-.card {
-  text-align: center;
-  margin: 20px;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-  transition: transform 0.3s ease-in-out;
-}
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card_wrap {
+.card-content {
   display: flex;
   justify-content: center;
-  margin: 0 auto;
-  max-width: 1280px;
 }
-.link {
-  text-decoration: none; /* 밑줄 제거 */
-  color: inherit; /* 링크의 색상을 상속 */
+
+.card-content {
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .poular-content {
+    margin-top: 20px;
+  }
+  .content-container {
+    padding: 0px 7px;
+  }
+  .card-container {
+    padding: 0px 5px;
+  }
+  .card-content {
+    margin-top: 5px;
+    height: auto;
+    width: auto;
+  }
+  .card-image {
+    border-radius: 50%;
+  }
+  .card-content p {
+    font-size: 12px;
+    white-space: normal;
+    line-height: 1.2;
+  }
 }

@@ -47,8 +47,7 @@ function ToolBar() {
           </div>
 
           <div className="mypage">
-            <a href="/">
-              {/* PUBLIC_URL 환경 변수를사용하여 퍼블릭에 접근해서 불러오기 */}
+            <a href="/mypage">
               <img
                 src={`${process.env.PUBLIC_URL}/img/mypage.png`}
                 alt="마이페이지"
@@ -123,7 +122,7 @@ function ToolBar() {
           <div className="nav-logo">
             <img
               className="logo-img"
-              src={`${process.env.PUBLIC_URL}/img/logo2.png`}
+              src={`${process.env.PUBLIC_URL}/img/logo.png`}
               alt="로고"
             ></img>
             <div className="sitename">

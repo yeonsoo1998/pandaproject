@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Post from "../post";
+import Post from "../../components/post";
 import "./signUpPage.css";
 
 const SignUpPage = () => {

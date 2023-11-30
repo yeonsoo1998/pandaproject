@@ -2,6 +2,7 @@ import Toolbar from "../toolbar/toolbar";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./detail.css";
+import Tabs from "../../components/tabs/tabs";
 
 function Detail() {
   const location = useLocation();
@@ -31,12 +32,14 @@ function Detail() {
   return (
     <div>
       <Toolbar />
-
+      <Tabs />
       <div className="book_container">
         <img src={bookData.img} alt={bookData.title} />
-        <h2>{bookData.title}</h2>
-        <p>작가: {bookData.writer}</p>
-        <p>즉시 구매가: {bookData.price}</p>
+        <div className="title_deco">
+          <h2>{bookData.title}</h2>
+          <p>작가: {bookData.writer}</p>
+          <p>즉시 구매가: {bookData.price}</p>
+        </div>
       </div>
       <div className="button_container">
         <button className="button_buy" onClick={handleBuy}>
@@ -52,6 +55,8 @@ function Detail() {
           {isAddedToWishlist ? "찜 해제" : "관심 상품으로 찜하기"}
         </button>
       </div>
+
+      <div>하단 추천제품 링크및 이미지 삽입공간</div>
     </div>
   );
 }

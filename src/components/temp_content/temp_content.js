@@ -1,52 +1,39 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Button, Card, Col, Row, CardGroup } from "react-bootstrap";
+import { useState } from "react";
+import popularItem from "../../data/popularItem";
 import "./temp_content.css";
 
-function CardComponent() {
-  return (
-    <div className="card_wrap">
-      <div className="content_card">
-        <CardGroup>
-          <Card className="card">
-            <Link to="category/novel">
-              <Card.Img className="Card_img" variant="top" src="img/book.png" />
-            </Link>
-            <Card.Body>
-              <Card.Title>책</Card.Title>
-            </Card.Body>
-          </Card>
+function Content() {
+  const [popularData, setPopularData] = useState(popularItem);
 
-          <Card className="card">
-            <Card.Img
-              className="Card_img"
-              variant="top"
-              src="img/fashion.png"
-            />
-            <Card.Body>
-              <Card.Title>패션</Card.Title>
-            </Card.Body>
-          </Card>
-          <Card className="card">
-            <Card.Img className="Card_img" variant="top" src="img/used.png" />
-            <Card.Body>
-              <Card.Title>중고 거래</Card.Title>
-            </Card.Body>
-          </Card>
-          <Card className="card">
-            <Card.Img
-              className="Card_img"
-              variant="top"
-              src="img/collectibles.png"
-            />
-            <Card.Body>
-              <Card.Title>수집품</Card.Title>
-            </Card.Body>
-          </Card>
-        </CardGroup>
+  return (
+    <div className="poular-content">
+      <div className="content-container">
+        {popularData.map((item) => (
+          <div className="card-container" key={item.id}>
+            <PopularContent key={item.id} popularData={item} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+function PopularContent(props) {
+  console.log("props.popularData:", props.popularData);
+  return (
+    <div className="card-box">
+      <a href="/category/novel" className="card-link">
+        <img
+          className="card-image"
+          src={props.popularData.img}
+          alt="카드 이미지"
+        />
+      </a>
+      <div className="card-content">
+        <p>{props.popularData.title}</p>
       </div>
     </div>
   );
 }
 
-export default CardComponent;
+export default Content;
